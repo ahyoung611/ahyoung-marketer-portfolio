@@ -83,7 +83,7 @@ nav {
   color: var(--red);
 }
 
-/* HERO */
+/* HERO ------------------------------------------------------------------------------ */
 #hero {
   padding-top: 52px;
   min-height: 95vh;
@@ -118,12 +118,12 @@ nav {
 }
 .hero-hook {
   font-family: 'DM Serif Display', 'Pretendard', serif;
-  font-size: clamp(1.8rem, 2.8vw, 2.5rem); /* 거대한 폰트 크기 밸런스 조정 */
-  line-height: 1.35; /* 타이틀 행간 자율성 확보 */
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  line-height: 1.35;
   color: var(--dark);
-  letter-spacing: -0.03em; /* 큰 타이틀에 맞춰 자간을 좁혀 고급스럽게 변경 */
+  letter-spacing: -0.03em;
   margin-bottom: 24px;
-  word-break: keep-all; /* 한글 단어가 깨지지 않게 줄바꿈 */
+  word-break: keep-all;
 }
 .hero-hook em {
   font-style: italic;
@@ -134,8 +134,8 @@ nav {
   color: var(--mid);
   line-height: 1.7;
   max-width: 460px;
-  margin-top: -8px; /* 메인 타이틀과 부드럽게 연결되도록 위쪽 여백 축소 */
-  margin-bottom: 56px; /* 아래 숫자 영역과의 간격 확보 */
+  margin-top: -8px;
+  margin-bottom: 56px;
   word-break: keep-all;
 }
 
@@ -232,18 +232,20 @@ nav {
 .hr-text-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 💡 핵심: 내부 요소들을 위아래로 예쁘게 찢어서 사진 높이와 일치시킴 */
+  justify-content: space-between;
   height: 100%;
 }
+
+/* ABOUT  ------------------------------------------------------------------------------ */
 .about-quote {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--dark);
   line-height: 1.5;
   padding-left: 12px;
-  border-left: 2px solid var(--red); /* 3px에서 2px로 줄여 가늘고 세련되게 */
+  border-left: 2px solid var(--red);
   word-break: keep-all;
-  margin-bottom: 0; /* 내부 간격은 flex 구조에 맡김 */
+  margin-bottom: 0;
 }
 .about-body {
   font-size: 0.85rem;
@@ -261,7 +263,7 @@ nav {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  margin-top: auto; /* 자연스럽게 맨 아래 배치 */
+  margin-top: auto;
 }
 .about-link {
   font-size: 0.7rem;
@@ -276,37 +278,52 @@ nav {
 .about-link:hover {
   opacity: 0.6;
 }
+
+/* MARQUEE  ------------------------------------------------------------------------------ */
 .marquee-wrap {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
-  padding: 12px 0;
+  padding: 14px 0;
+  background: #fff;
 }
+
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: mq 24s linear infinite;
+  flex-wrap: nowrap;
+  animation: mq 20s linear infinite;
 }
 .mq-span {
+  flex-shrink: 0;
   font-size: 0.82rem;
   font-weight: 500;
   color: var(--muted);
   white-space: nowrap;
+  display: block;
 }
+
+/* 사라졌던 하이라이트 컬러 복원 */
 .mq-span b {
   color: var(--red);
   font-weight: 700;
 }
+
+.mq-span b.dot {
+  color: var(--border);
+}
+
+/* 무한 루프 애니메이션 축 교정 */
 @keyframes mq {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-/* SECTION */
+/* SECTION ------------------------------------------------------------------------------ */
 .sec {
   padding: 88px 48px;
   border-top: 1px solid var(--border);
@@ -336,7 +353,7 @@ nav {
   line-height: 1.15;
 }
 
-/* COMPETENCY */
+/* COMPETENCY  ------------------------------------------------------------------------------ */
 .comp-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -450,7 +467,7 @@ nav {
   color: var(--white);
 }
 
-/* PROJECTS */
+/* PROJECTS  ------------------------------------------------------------------------------ */
 .proj-list {
   display: flex;
   flex-direction: column;
@@ -537,7 +554,7 @@ nav {
   font-weight: 500;
 }
 
-/* EXPERIENCE */
+/* EXPERIENCE  ------------------------------------------------------------------------------ */
 .exp-list {
   display: flex;
   flex-direction: column;
@@ -594,7 +611,7 @@ nav {
   font-size: 0.8rem;
 }
 
-/* EDUCATION */
+/* EDUCATION  ------------------------------------------------------------------------------ */
 .edu-list {
   display: flex;
   flex-direction: column;
@@ -638,7 +655,7 @@ nav {
   color: var(--muted);
 }
 
-/* CONTACT */
+/* CONTACT  ------------------------------------------------------------------------------ */
 #contact {
   background: var(--dark);
   padding: 88px 48px;
@@ -704,7 +721,7 @@ footer {
   letter-spacing: 0.1em;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE  ------------------------------------------------------------------------------ */
 @media (max-width: 860px) {
   nav {
     padding: 0 20px;

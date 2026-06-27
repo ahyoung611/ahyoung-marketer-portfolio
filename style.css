@@ -752,7 +752,7 @@ footer {
 }
 
 /* RESPONSIVE  ------------------------------------------------------------------------------ */
-@media (max-width: 860px) {
+@media (max-width: 650px) {
   nav {
     padding: 0 20px;
   }
@@ -804,6 +804,11 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 44px;
+  }
+
+  .hr-body {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .proj-row {

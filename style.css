@@ -19,8 +19,8 @@ body {
   background: #fff;
   color: #333;
   overflow-x: hidden;
-  line-height: 1.7; /* 기존 1.6에서 1.7로 넓혀 본문 가독성 확보 */
-  letter-spacing: -0.02em; /* 한글 폰트의 가독성을 높여주는 자간 조절 */
+  line-height: 1.7;
+  letter-spacing: -0.02em;
 }
 
 a {
@@ -71,7 +71,13 @@ nav {
   gap: 32px;
   list-style: none;
 }
+.nav-links li {
+  display: flex;
+  align-items: center;
+  height: 52px;
+}
 .nav-links a {
+  display: block;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;

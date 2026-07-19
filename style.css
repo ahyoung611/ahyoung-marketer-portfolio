@@ -234,6 +234,7 @@ nav {
   display: block;
 }
 .hr-badge {
+  width: 350px;
   background: var(--red);
   color: var(--white);
   text-align: center;
@@ -473,7 +474,7 @@ nav {
 }
 .block-text {
   font-size: 1rem;
-  color: var(--mid);
+  /* color: var(--mid); */
   line-height: 1.85;
   word-break: keep-all;
 }
@@ -583,10 +584,10 @@ nav {
 .graph-box {
   flex: 1.5;
   min-width: 300px;
-  width: 80%;
+  width: 90%;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 16px;
+  padding: 5px;
   background: var(--white);
   display: flex;
   align-items: center;
